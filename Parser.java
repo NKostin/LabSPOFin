@@ -232,19 +232,7 @@ public class Parser {
 		}
 		return false;
 	}
-//	public boolean for_dec()throws Exception{
-//		if(var()){ 
-//			if(dec()){
-//					if(closeBr()){System.out.println("gooddec"+ currentToken);
-//				return true;
-//				}else throw new Exception("Braket ')' expected but " +currentToken +"found.");
-//				
-//				
-//			}System.out.println("baddec"+ currentToken);
-//			return false;
-//		}
-//		return false;
-//	}
+
 	
 	public boolean stmt() throws Exception{
 		if(stmtUnit()){
