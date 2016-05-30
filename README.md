@@ -1,2 +1,2 @@
 # SpoKyrs
-dsfsdf
+Курсовая работа
