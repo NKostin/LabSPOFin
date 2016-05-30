@@ -14,6 +14,7 @@ switcher_decl: SWITCHER_KW OPENBR VAR CLOSEBR
 switcher_body: OPENBRECES (exprSwi)* defaultSwi CLOSEBRECES
 exprSwi:  CASE_KW DIGIT CL ASSIGN BREAK_KW SM
 defaultSwi:  DEFAULT_KW CL BREAK_KW SM
+
 Терминалы:
 VAR_KW:  ^var$ 
 WS: ^\\s*$
