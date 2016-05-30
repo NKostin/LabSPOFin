@@ -2,7 +2,8 @@
 lang: (expr)*
 expr: declare | assign | for_loop | switcher
 declare: VAR_KW WS VAR SM
-assign: VAR ASSIGN_OP| LESS_OP|MORE_OP|LESSOREQ_OP|MOREOREQ_OP smth SM
+assign: VAR ASSIGN_OP| LESS_OP|MORE_OP|LESSOREQ_OP
+|MOREOREQ_OP smth SM
 smth: smth_unit (PLUS| MINUS |DEL| UMN smth_unit)*
 sth_unit: OPENBR smth DIGIT | VAR (CLOSEBR)*
 for_loop: for_decl for_body
@@ -11,7 +12,8 @@ for_body: OPENBRECES (assign)* CLOSEBRECES
 for_incdec: VAR INC| DEC CLOSEBR
 switcher: switcher_decl switcher_body
 switcher_decl: SWITCHER_KW OPENBR VAR CLOSEBR
-switcher_body: OPENBRECES (exprSwi)* defaultSwi CLOSEBRECES
+switcher_body: OPENBRECES (exprSwi)* defaultSwi 
+CLOSEBRECES
 exprSwi:  CASE_KW DIGIT CL ASSIGN BREAK_KW SM
 defaultSwi:  DEFAULT_KW CL BREAK_KW SM
 
